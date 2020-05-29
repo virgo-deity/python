@@ -16,8 +16,8 @@ logger = logging.getLogger()
 fh = logging.FileHandler('test.log')
 ch = logging.StreamHandler()
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-fh.setFormatter(formatter)
-ch.setFormatter(formatter)
+fh.setFormatter(formatter)#文件输出格式
+ch.setFormatter(formatter)#屏幕输出格式
 logger.addHandler(fh)
 logger.addHandler(ch)
 logger.setLevel(logging.DEBUG)
